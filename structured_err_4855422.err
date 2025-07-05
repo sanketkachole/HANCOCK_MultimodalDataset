@@ -1,0 +1,25 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1750907696.813833   58453 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1750907696.993046   58453 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/umap/umap_.py:1945: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(f"n_jobs value {self.n_jobs} overridden to 1 by setting random_state. Use no seed for parallelism.")
+/N/project/wsiclass/HANCOCK_MultimodalDataset/multimodal_machine_learning/execution/outcome_prediction.py:167: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df_split.recurrence = df_split.recurrence.replace({"no": 0, "yes": 1})
+Traceback (most recent call last):
+  File "/N/project/wsiclass/HANCOCK_MultimodalDataset/multimodal_machine_learning/execution/outcome_prediction.py", line 224, in <module>
+    plt.savefig(results_dir/f"umap_split_{data_split_labels[i]}.svg", bbox_inches="tight")
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/pyplot.py", line 1228, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/figure.py", line 3395, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2204, in print_figure
+    result = print_method(
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2054, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/backends/backend_svg.py", line 1328, in print_svg
+    with cbook.open_file_cm(filename, "w", encoding="utf-8") as fh:
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/cbook.py", line 497, in open_file_cm
+    fh, opened = to_filehandle(path_or_file, mode, True, encoding)
+  File "/N/u/skachole/BigRed200/pathoenv/lib/python3.10/site-packages/matplotlib/cbook.py", line 483, in to_filehandle
+    fh = open(fname, flag, encoding=encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/N/project/wsiclass/HANCOCK_MultimodalDataset/structured/umap_split_In distribution.svg'
